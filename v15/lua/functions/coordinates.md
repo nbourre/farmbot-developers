@@ -114,6 +114,12 @@ grid.each(function(cell)
 end)
 ```
 
+{%
+include callout.html
+type="info"
+content="The anonymous function passed to `grid.each()` runs in a separate thread. This means you cannot directly access variables from the main thread inside the function. If you need to use external values, consider passing them through the `cell` object."
+%}
+
 # group(id)
 
 Returns a table of **current group member IDs**, sorted by the group's **SORT BY** method.
